@@ -27,7 +27,7 @@ class LaravelBrevoTest extends Orchestra
     protected function getPackageProviders($app): array
     {
         return [
-            BrevoServiceProvider::class
+            BrevoServiceProvider::class,
         ];
     }
 
