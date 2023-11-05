@@ -6,7 +6,6 @@
 /coverage
 phpunit.xml
 .phpunit.cache
-.phpunit.result.cache
 
 # Testbench
 testbench.yaml
