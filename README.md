@@ -1,7 +1,7 @@
 # Laravel Brevo
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hofmannsven/laravel-brevo.svg?labelColor=232e4a&color=55597b&style=for-the-badge)](https://packagist.org/packages/hofmannsven/laravel-brevo)
-[![Build Status](https://img.shields.io/travis/hofmannsven/laravel-brevo/master.svg?labelColor=232e4a&color=55597b&style=for-the-badge)](https://travis-ci.org/hofmannsven/laravel-brevo)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hofmannsven/laravel-brevo/run-tests.yml?branch=main&label=tests&labelColor=232e4a&color=55597b&style=for-the-badge)](https://github.com/hofmannsven/laravel-brevo/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub license](https://img.shields.io/github/license/hofmannsven/laravel-brevo.svg?labelColor=232e4a&color=55597b&style=for-the-badge)](https://raw.githubusercontent.com/hofmannsven/laravel-brevo/master/LICENSE.md)
 
 This package is a wrapper for [Brevo's API v3 PHP library](https://github.com/getbrevo/brevo-php).

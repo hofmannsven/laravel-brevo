@@ -56,7 +56,7 @@
             "@composer run build",
             "@php vendor/bin/testbench serve"
         ],
-        "test": "vendor/bin/testbench package:test",
+        "test": "vendor/bin/testbench package:test --no-coverage",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
