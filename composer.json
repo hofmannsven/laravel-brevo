@@ -1,0 +1,77 @@
+{
+    "name": "hofmannsven/laravel-brevo",
+    "description": "Wrapper for Brevo's API v3 PHP library.",
+    "keywords": [
+        "laravel",
+        "brevo"
+    ],
+    "homepage": "https://github.com/hofmannsven/laravel-brevo",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sven Hofmann",
+            "email": "info@hofmannsven.com",
+            "homepage": "https://hofmannsven.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "info@hofmannsven.com",
+        "issues": "https://github.com/hofmannsven/laravel-brevo/issues",
+        "wiki": "https://github.com/hofmannsven/laravel-brevo/wiki",
+        "source": "https://github.com/hofmannsven/laravel-brevo"
+    },
+    "require": {
+        "php": "^8.1",
+        "getbrevo/brevo-php": "^1.0.0",
+        "illuminate/contracts": "^8.0|^9.0|^10.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^7.10",
+        "orchestra/testbench": "^6.0|^7.0|^8.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hofmannsven\\Brevo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hofmannsven\\Brevo\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": [
+            "@composer run prepare",
+            "@php vendor/bin/testbench workbench:build --ansi"
+        ],
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@composer run build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "test": "vendor/bin/testbench package:test",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hofmannsven\\Brevo\\BrevoServiceProvider"
+            ],
+            "aliases": {
+                "Brevo": "Hofmannsven\\Brevo\\Facades\\Brevo"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
