@@ -1,3 +1,5 @@
+[![Laravel Brevo](https://raw.githubusercontent.com/hofmannsven/laravel-brevo/main/art/banner.png)](https://hofmannsven.com/?ref=github)
+
 # Laravel Brevo
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hofmannsven/laravel-brevo.svg?labelColor=232e4a&color=55597b&style=for-the-badge)](https://packagist.org/packages/hofmannsven/laravel-brevo)
@@ -53,3 +55,5 @@ My GPG fingerprint/key is available on [Keybase](https://keybase.io/hofmannsven)
 ## License
 
 MIT License (MIT). Please read the [license](LICENSE.md) for more information.
+
+<sup><sub>Laravel and the Laravel logo are trademarks of Taylor Otwell. Banner image generated with banners.beyondco.de</sub></sup>

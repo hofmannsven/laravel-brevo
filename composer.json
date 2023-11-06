@@ -1,6 +1,6 @@
 {
     "name": "hofmannsven/laravel-brevo",
-    "description": "Wrapper for Brevo's API v3 PHP library.",
+    "description": "Laravel wrapper for Brevo's API v3 PHP library.",
     "keywords": [
         "laravel",
         "brevo"
@@ -19,8 +19,8 @@
     "support": {
         "email": "info@hofmannsven.com",
         "issues": "https://github.com/hofmannsven/laravel-brevo/issues",
-        "wiki": "https://github.com/hofmannsven/laravel-brevo/wiki",
-        "source": "https://github.com/hofmannsven/laravel-brevo"
+        "source": "https://github.com/hofmannsven/laravel-brevo",
+        "wiki": "https://github.com/hofmannsven/laravel-brevo/wiki"
     },
     "require": {
         "php": "^8.1",
@@ -39,23 +39,10 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Hofmannsven\\Brevo\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Hofmannsven\\Brevo\\Tests\\": "tests/"
         }
     },
     "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": [
-            "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "start": [
-            "Composer\\Config::disableProcessTimeout",
-            "@composer run build",
-            "@php vendor/bin/testbench serve"
-        ],
         "test": "vendor/bin/testbench package:test --no-coverage",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
