@@ -1,4 +1,10 @@
 preset: laravel
 
+enabled:
+  - short_array_syntax
+  - declare_strict_types
+  - fully_qualified_strict_types
+  - protected_to_private
+
 disabled:
   - single_class_element_per_statement

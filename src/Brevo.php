@@ -8,7 +8,7 @@ use Brevo\Client\Configuration;
 
 class Brevo
 {
-    protected Configuration $configuration;
+    private Configuration $configuration;
 
     public function __construct()
     {

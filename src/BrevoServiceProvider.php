@@ -27,8 +27,6 @@ class BrevoServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/brevo.php', 'brevo');
 
         // Bind the service to the container.
-        $this->app->singleton('brevo', function () {
-            return new Brevo();
-        });
+        $this->app->singleton('brevo', fn () => new Brevo());
     }
 }

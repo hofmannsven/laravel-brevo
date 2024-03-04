@@ -10,8 +10,31 @@ use Hofmannsven\Brevo\Facades\Brevo;
 use Orchestra\Testbench\TestCase as Orchestra;
 use PHPUnit\Framework\Attributes\Test;
 
-class LaravelBrevoTest extends Orchestra
+final class LaravelBrevoTest extends Orchestra
 {
+    #[Test]
+    public function it_tests_if_configuration_is_instance_of_brevo_client(): void
+    {
+        $this->assertInstanceOf(Configuration::class, Brevo::getConfiguration());
+    }
+
+    #[Test]
+    public function it_tests_if_configuration_is_set(): void
+    {
+        $config = new Configuration();
+        $brevo = new Brevo();
+        $brevo::setConfiguration($config);
+        $this->assertEquals($config, $brevo::getConfiguration());
+    }
+
+    #[Test]
+    public function it_tests_if_config_keys_are_set(): void
+    {
+        $config = Brevo::getConfiguration();
+        $this->assertEquals($config->getApiKey('api-key'), config('brevo.api_key'));
+        $this->assertEquals($config->getApiKey('partner-key'), config('brevo.partner_key'));
+    }
+
     /**
      * @param  \Illuminate\Foundation\Application  $app
      */
@@ -39,28 +62,5 @@ class LaravelBrevoTest extends Orchestra
         return [
             'Brevo' => Brevo::class,
         ];
-    }
-
-    #[Test]
-    public function it_tests_if_configuration_is_instance_of_brevo_client(): void
-    {
-        $this->assertInstanceOf(Configuration::class, Brevo::getConfiguration());
-    }
-
-    #[Test]
-    public function it_tests_if_configuration_is_set(): void
-    {
-        $config = new Configuration();
-        $brevo = new Brevo();
-        $brevo::setConfiguration($config);
-        $this->assertEquals($config, $brevo::getConfiguration());
-    }
-
-    #[Test]
-    public function it_tests_if_config_keys_are_set(): void
-    {
-        $config = Brevo::getConfiguration();
-        $this->assertEquals($config->getApiKey('api-key'), config('brevo.api_key'));
-        $this->assertEquals($config->getApiKey('partner-key'), config('brevo.partner_key'));
     }
 }

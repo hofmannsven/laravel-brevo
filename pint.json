@@ -1,0 +1,10 @@
+{
+  "preset": "laravel",
+  "rules": {
+    "array_syntax": true,
+    "declare_parentheses": true,
+    "declare_strict_types": true,
+    "fully_qualified_strict_types": true,
+    "protected_to_private": true
+  }
+}
