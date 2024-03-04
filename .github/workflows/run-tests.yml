@@ -43,3 +43,6 @@ jobs:
 
       - name: Execute tests
         run: vendor/bin/phpunit --no-coverage
+
+      - name: Run Pint
+        run: vendor/bin/pint
