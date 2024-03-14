@@ -24,14 +24,14 @@
     },
     "require": {
         "php": "^8.1",
-        "getbrevo/brevo-php": "^1.0.0",
-        "illuminate/contracts": "^8.0|^9.0|^10.0"
+        "getbrevo/brevo-php": "^1.0",
+        "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.13",
-        "nunomaduro/collision": "^7.10",
-        "orchestra/testbench": "^6.0|^7.0|^8.0",
-        "phpunit/phpunit": "^10.1"
+        "laravel/pint": "^1.14",
+        "nunomaduro/collision": "^8.0",
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^11.0"
     },
     "autoload": {
         "psr-4": {

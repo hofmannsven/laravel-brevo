@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 1.2.0 / Release - 2024-03-14
+- Add support for Laravel 11
+
 ## 1.1.0 / Release - 2024-03-05
 - Convert protected variables to private.
 - Enforce custom formatting with Laravel Pint (GitHub Action).
