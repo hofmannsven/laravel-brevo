@@ -21,8 +21,8 @@ final class LaravelBrevoTest extends Orchestra
     #[Test]
     public function it_tests_if_configuration_is_set(): void
     {
-        $config = new Configuration();
-        $brevo = new Brevo();
+        $config = new Configuration;
+        $brevo = new Brevo;
         $brevo::setConfiguration($config);
         $this->assertEquals($config, $brevo::getConfiguration());
     }

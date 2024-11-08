@@ -24,7 +24,15 @@ Publish package config files:
 php artisan vendor:publish --provider="Hofmannsven\Brevo\BrevoServiceProvider"
 ```
 
-## Testing
+## Development
+
+### Code Style Fixer
+
+```bash
+composer format
+```
+
+### Testing
 
 ```bash
 composer test
