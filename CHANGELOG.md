@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 1.2.2 / Release - 2024-11-13
+- Apply Laravel security release following [CVE-2024-52301](https://github.com/advisories/GHSA-gv7v-rgg6-548h)
+
 ## 1.2.1 / Release - 2024-11-08
 - Apply Symfony security release following [CVE-2024-51736](https://github.com/advisories/GHSA-qq5c-677p-737q)
 
