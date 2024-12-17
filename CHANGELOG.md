@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 1.2.3 / Release - 2024-12-17
+- Apply Commonmark security release following [GHSA-c2pc-g5qf-rfrf](https://github.com/thephpleague/commonmark/security/advisories/GHSA-c2pc-g5qf-rfrf)
+
 ## 1.2.2 / Release - 2024-11-13
 - Apply Laravel security release following [CVE-2024-52301](https://github.com/advisories/GHSA-gv7v-rgg6-548h)
 
