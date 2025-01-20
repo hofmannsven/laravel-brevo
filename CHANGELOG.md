@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 1.2.4 / Release - 2025-01-20
+- Apply Carbon security release following [CVE-2025-22145](https://github.com/advisories/GHSA-j3f9-p6hm-5w6q)
+
 ## 1.2.3 / Release - 2024-12-17
 - Apply Commonmark security release following [GHSA-c2pc-g5qf-rfrf](https://github.com/thephpleague/commonmark/security/advisories/GHSA-c2pc-g5qf-rfrf)
 
