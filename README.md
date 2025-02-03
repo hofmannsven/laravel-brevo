@@ -38,6 +38,27 @@ composer format
 composer test
 ```
 
+## Usage
+
+```php
+use App\Services\Brevo\Facades\Brevo;
+
+// Use any getbrevo/brevo-php API
+// AccountApi
+$result = Brevo::AccountApi()->getAccount();
+var_dump($result);
+
+// DomainsApi
+$result = Brevo::DomainsApi()->getDomains();
+var_dump($result);
+
+// With custom client
+$result = Brevo::AccountApi(
+    new \GuzzleHttp\Client()
+)->getAccount();
+
+```
+
 ## Changelog
 
 Please read the [changelog](https://github.com/hofmannsven/laravel-brevo/blob/master/CHANGELOG.md) for more information about recent changes.
