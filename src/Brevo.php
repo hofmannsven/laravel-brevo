@@ -23,11 +23,10 @@ class Brevo
     {
         $class = "Brevo\\Client\Api\\{$name}";
 
-        return !isset($arguments[0]) ? new $class(
+        return ! isset($arguments[0]) ? new $class(
             null,
             $this->getConfiguration()
         ) : new $class($arguments[0], $this->getConfiguration());
-
     }
 
     public function getConfiguration(): Configuration
