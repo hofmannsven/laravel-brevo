@@ -8,6 +8,8 @@
 
 This package is a wrapper for [Brevo's API v3 PHP library](https://github.com/getbrevo/brevo-php).
 
+Tested with PHP versions 8.1, 8.2, 8.3, and 8.4 on Laravel 10 and Laravel 11.
+
 ## Installation
 
 You can install the package via Composer:
@@ -24,6 +26,72 @@ Publish package config files:
 php artisan vendor:publish --provider="Hofmannsven\Brevo\BrevoServiceProvider"
 ```
 
+### Set the API Key
+
+In your `.env' file, add your Brevo API key:
+
+```
+BREVO_API_KEY=xxx
+```
+
+## Usage
+
+```php
+use Hofmannsven\Brevo\Facades\Brevo;
+
+// Account
+$result = Brevo::AccountApi()->getAccount();
+var_dump($result);
+
+// Domains
+$result = Brevo::DomainsApi()->getDomains();
+var_dump($result);
+
+// Contacts
+$result = Brevo::ContactsApi()->getContacts();
+var_dump($result);
+
+// With custom client
+$result = Brevo::AccountApi(
+    new \GuzzleHttp\Client()
+)->getAccount();
+```
+
+## Available APIs
+
+Use any `getbrevo/brevo-php` API (see [supported functions](https://developers.brevo.com/docs/available-functions-in-api-clients)):
+
+- AccountApi
+- AttributesApi
+- CompaniesApi
+- ContactsApi
+- ConversationsApi
+- CouponsApi
+- CRMApi
+- DealsApi
+- DomainsApi
+- EcommerceApi
+- EmailCampaignsApi
+- EventsApi
+- ExternalFeedsApi
+- FilesApi
+- FoldersApi
+- InboundParsingApi
+- ListsApi
+- MasterAccountApi
+- NotesApi
+- ProcessApi
+- ResellerApi
+- SendersApi
+- SMSCampaignsApi
+- TasksApi
+- TransactionalEmailsApi
+- TransactionalSMSApi
+- TransactionalWhatsAppApi
+- UserApi
+- WebhooksApi
+- WhatsAppCampaignsApi
+
 ## Development
 
 ### Code Style Fixer
@@ -36,27 +104,6 @@ composer format
 
 ```bash
 composer test
-```
-
-## Usage
-
-```php
-use App\Services\Brevo\Facades\Brevo;
-
-// Use any getbrevo/brevo-php API
-// AccountApi
-$result = Brevo::AccountApi()->getAccount();
-var_dump($result);
-
-// DomainsApi
-$result = Brevo::DomainsApi()->getDomains();
-var_dump($result);
-
-// With custom client
-$result = Brevo::AccountApi(
-    new \GuzzleHttp\Client()
-)->getAccount();
-
 ```
 
 ## Changelog

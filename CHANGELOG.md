@@ -2,6 +2,11 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 2.0.0 / Release - 2025-02-03
+- Add support for `getbrevo/brevo-php` v2
+- Improve usage via the Facade - Thanks to @tiran133 for the contribution!
+- Add tests for PHP 8.4
+
 ## 1.2.4 / Release - 2025-01-20
 - Apply Carbon security release following [CVE-2025-22145](https://github.com/advisories/GHSA-j3f9-p6hm-5w6q)
 
