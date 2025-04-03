@@ -8,7 +8,7 @@
 
 This package is a wrapper for [Brevo's API v3 PHP library](https://github.com/getbrevo/brevo-php).
 
-Tested with PHP versions 8.1, 8.2, 8.3, and 8.4 on Laravel 10 and Laravel 11.
+Tested with PHP versions 8.1, 8.2, 8.3, and 8.4 on Laravel 10, Laravel 11, and Laravel 12.
 
 ## Installation
 

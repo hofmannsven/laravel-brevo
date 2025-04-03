@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 2.1.0 / Release - 2025-04-04
+- Add support for Laravel 12
+
 ## 2.0.0 / Release - 2025-02-03
 - Add support for `getbrevo/brevo-php` v2
 - Improve usage via the Facade - Thanks to @tiran133 for the contribution!
