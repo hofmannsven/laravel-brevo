@@ -28,7 +28,7 @@ php artisan vendor:publish --provider="Hofmannsven\Brevo\BrevoServiceProvider"
 
 ### Set the API Key
 
-In your `.env' file, add your Brevo API key:
+In your `.env` file, add your Brevo API key:
 
 ```
 BREVO_API_KEY=xxx

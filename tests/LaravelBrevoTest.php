@@ -41,7 +41,7 @@ final class LaravelBrevoTest extends Orchestra
     protected function getEnvironmentSetUp($app): void
     {
         $app['config']->set('brevo.api_key', 'my_api_key');
-        $app['config']->set('brevo.my_partner_key', 'my_partner_key');
+        $app['config']->set('brevo.partner_key', 'my_partner_key');
     }
 
     /**
