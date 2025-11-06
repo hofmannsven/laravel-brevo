@@ -35,6 +35,24 @@ final class LaravelBrevoTest extends Orchestra
         $this->assertEquals($config->getApiKey('partner-key'), config('brevo.partner_key'));
     }
 
+    #[Test]
+    public function it_tests_create_contact_model_instantiation(): void
+    {
+        // This test demonstrates the CORRECT way to create a contact
+        $createContact = new \Brevo\Client\Model\CreateContact();
+        $createContact['email'] = '[email protected]';
+        $createContact['attributes'] = ['FIRSTNAME' => 'John', 'LASTNAME' => 'Doe'];
+        $createContact['listIds'] = [1];
+        $createContact['updateEnabled'] = true;
+
+        // Verify the model is properly instantiated
+        $this->assertInstanceOf(\Brevo\Client\Model\CreateContact::class, $createContact);
+        $this->assertEquals('[email protected]', $createContact['email']);
+        $this->assertEquals(['FIRSTNAME' => 'John', 'LASTNAME' => 'Doe'], $createContact['attributes']);
+        $this->assertEquals([1], $createContact['listIds']);
+        $this->assertTrue($createContact['updateEnabled']);
+    }
+
     /**
      * @param  \Illuminate\Foundation\Application  $app
      */

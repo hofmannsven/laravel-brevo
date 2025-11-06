@@ -47,14 +47,49 @@ var_dump($result);
 $result = Brevo::DomainsApi()->getDomains();
 var_dump($result);
 
-// Contacts
+// Contacts - List contacts
 $result = Brevo::ContactsApi()->getContacts();
+var_dump($result);
+
+// Contacts - Create a new contact
+$createContact = new \Brevo\Client\Model\CreateContact();
+$createContact['email'] = '[email protected]';
+$createContact['attributes'] = ['FIRSTNAME' => 'John', 'LASTNAME' => 'Doe'];
+$createContact['listIds'] = [1];
+$createContact['updateEnabled'] = true;
+
+$result = Brevo::ContactsApi()->createContact($createContact);
 var_dump($result);
 
 // With custom client
 $result = Brevo::AccountApi(
     new \GuzzleHttp\Client()
 )->getAccount();
+```
+
+## Common Issues
+
+### "Invalid resource type: array" Error
+
+When using methods like `createContact()`, you cannot pass a plain PHP array directly. The Brevo SDK requires model objects.
+
+**Incorrect:**
+```php
+// This will NOT work
+Brevo::ContactsApi()->createContact([
+    'email' => '[email protected]',
+    'updateEnabled' => true,
+]);
+```
+
+**Correct:**
+```php
+// This WILL work
+$createContact = new \Brevo\Client\Model\CreateContact();
+$createContact['email'] = '[email protected]';
+$createContact['updateEnabled'] = true;
+
+Brevo::ContactsApi()->createContact($createContact);
 ```
 
 ## Available APIs
