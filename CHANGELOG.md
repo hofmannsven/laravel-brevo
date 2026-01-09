@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 2.1.3 / Release - 2026-01-09
+- Maintenance update (CI configuration, remove composer.lock file)
+
 ## 2.1.2 / Release - 2025-11-26
 - Apply Symfony security release following [CVE-2025-64500](https://github.com/advisories/GHSA-3rg7-wf37-54rm)
 
