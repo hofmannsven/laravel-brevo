@@ -2,6 +2,10 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 2.2.0 / Release - 2026-03-20
+- Add support for Laravel 13 - Thanks to @marcorieser for the contribution!
+- Add tests for PHP 8.5
+
 ## 2.1.3 / Release - 2026-01-09
 - Maintenance update (CI configuration, remove composer.lock file)
 
