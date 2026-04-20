@@ -2,6 +2,9 @@
 
 Notable changes and release notes of the _Laravel Brevo_ package.
 
+## 2.2.1 / Release - 2026-04-20
+- Apply PHPUnit security release following [CVE-2026-24765](https://github.com/advisories/GHSA-vvj3-c3rp-c85p)
+
 ## 2.2.0 / Release - 2026-03-20
 - Add support for Laravel 13 - Thanks to @marcorieser for the contribution!
 - Add tests for PHP 8.5
